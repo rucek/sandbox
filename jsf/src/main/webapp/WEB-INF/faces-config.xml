@@ -8,12 +8,12 @@
 
     <managed-bean>
         <managed-bean-name>sessionBean</managed-bean-name>
-        <managed-bean-class>org.kunicki.jsf.SessionBean</managed-bean-class>
+        <managed-bean-class>org.kunicki.sandbox.jsf.SessionBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <managed-bean>
         <managed-bean-name>targetBean</managed-bean-name>
-        <managed-bean-class>org.kunicki.jsf.TargetBean</managed-bean-class>
+        <managed-bean-class>org.kunicki.sandbox.jsf.TargetBean</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
         <managed-property>
             <property-name>sessionBean</property-name>
