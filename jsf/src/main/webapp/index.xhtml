@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>index</title>
+</head>
+<body>
+<h:outputText value="Hello, #{param.name}"/>
+<h:form>
+    <h:panelGrid columns="1">
+        <h:commandLink action="target" value="link">
+            <f:param name="p" value="link"/>
+            <f:setPropertyActionListener value="#{targetBean.now}" target="#{sessionBean.date}"/>
+        </h:commandLink>
+        <h:commandLink action="#{targetBean.action}" value="link action">
+            <f:param name="p" value="link_action"/>
+        </h:commandLink>
+        <h:outputLink value="target.jsf">
+            plain link
+            <f:param name="p" value="get_param"/>
+        </h:outputLink>
+        <h:commandButton action="target" value="button">
+            <f:param name="p" value="button"/>
+        </h:commandButton>
+        <h:commandButton action="#{targetBean.action}" value="bean action">
+            <f:param name="p" value="bean_action"/>
+        </h:commandButton>
+    </h:panelGrid>
+</h:form>
+</body>
+</html>

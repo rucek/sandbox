@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    <application>
+        <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+    </application>
+
+    <managed-bean>
+        <managed-bean-name>sessionBean</managed-bean-name>
+        <managed-bean-class>org.kunicki.jsf.SessionBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>targetBean</managed-bean-name>
+        <managed-bean-class>org.kunicki.jsf.TargetBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>sessionBean</property-name>
+            <value>#{sessionBean}</value>
+        </managed-property>
+    </managed-bean>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>source</from-outcome>
+            <to-view-id>/source.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>target</from-outcome>
+            <to-view-id>/target.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>
