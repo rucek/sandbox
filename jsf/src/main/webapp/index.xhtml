@@ -12,6 +12,7 @@
         <h:commandLink action="target" value="link">
             <f:param name="p" value="link"/>
             <f:setPropertyActionListener value="#{targetBean.now}" target="#{sessionBean.date}"/>
+            <f:setPropertyActionListener value="#{targetBean.now}" target="#{targetBean.date}"/>
         </h:commandLink>
         <h:commandLink action="#{targetBean.action}" value="link action">
             <f:param name="p" value="link_action"/>

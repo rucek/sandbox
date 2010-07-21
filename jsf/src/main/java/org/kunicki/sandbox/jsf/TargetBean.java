@@ -9,7 +9,8 @@ import java.util.Date;
 public class TargetBean {
     
     private String p;
-    private Object sessionBean;
+    private SessionBean sessionBean;
+    private Date date;
 
     public String action() {
         String p = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("p");
@@ -25,11 +26,19 @@ public class TargetBean {
         return p;
     }
 
-    public void setSessionBean(Object sessionBean) {
+    public void setSessionBean(SessionBean sessionBean) {
         this.sessionBean = sessionBean;
     }
 
     public Date getNow() {
         return new Date();
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
