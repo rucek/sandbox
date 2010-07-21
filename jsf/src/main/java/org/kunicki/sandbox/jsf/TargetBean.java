@@ -1,4 +1,4 @@
-package org.kunicki.jsf;
+package org.kunicki.sandbox.jsf;
 
 import javax.faces.context.FacesContext;
 import java.util.Date;

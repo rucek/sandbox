@@ -1,4 +1,4 @@
-package org.kunicki.jsf;
+package org.kunicki.sandbox.jsf;
 
 import java.util.Date;
 
